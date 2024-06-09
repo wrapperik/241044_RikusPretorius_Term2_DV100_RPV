@@ -1,0 +1,888 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: #ffffffc7;
+    width: 90%;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px 0px;
+    backdrop-filter: blur(5px);
+}
+
+
+.logo {
+    width: 300px;
+    height: 30px;
+    background-image: url(../Assets/Images/logo.png);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.centerMenu {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.centerMenu a{
+    padding-left: 20px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.searchBar{
+    display: flex;
+    margin-left: auto;
+    background-color: #ffffff;
+    width: 200px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.fa-solid {
+    padding: 5px 10px 5px 5px;
+
+}
+
+.fa-cart-shopping {
+    margin-left: auto;
+}
+
+header {
+    display: flex;
+    background-image: url(../Assets/Images/homePageHeader.png);
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh;
+    padding: 40px;
+}
+
+.bottomLeft{
+    margin-top: auto;
+    
+}
+
+.bottomLeft h1{
+    font-family: 'Porter Sans Block';
+    font-size: 50px;
+    color: #ff0000;
+}
+
+.bottomLeft p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+
+@font-face {
+    font-family: 'Porter Sans Block';
+    src: url(../Assets/Fonts/porter_sans_block/porter-sans-inline-block-webfont.woff) format("woff");
+}
+
+#featured {
+    display: flex;
+    background-color: #4D299A;
+    padding: 60px 60px 60px 40px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.marsImage {
+    width: 600px;
+    height: 600px;
+    background-image: url(../Assets/Images/marsSliderClipped1.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding: 10px;
+    position: relative;
+}
+
+.featuredText {
+    width: 50%;
+}
+
+.featuredText h1{
+    color: white;
+    font-size: 30px;
+}
+
+.featuredText h5{
+    color: lightblue;
+}
+
+.featuredText p{
+    color: lightblue;
+}
+
+.featuredText button{
+    padding: 15px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    margin: 20px 20px 20px 0px;
+    width: 200px;
+    border-radius: 12px;
+}
+
+.rightArrow{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 20px;
+    padding: 10px;
+
+}
+
+.leftArrow{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.trips {
+    text-align: center;
+    background-color: #4D299A;
+    padding: 20px;
+    color: #ffffff;
+    padding: 40px;
+    justify-items: center;
+    align-self: center;
+}
+
+.trips h1 {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.trips h5{
+    color: lightblue;
+}
+
+.upcomingTrips{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.planetMars, .planetJupiter, .planetNeptune, .planetSaturn {
+    padding-left: 20px;
+}
+
+.bookATripNow {
+    color: #ffffff;
+    background-color:#ff0000;
+    padding: 20px 70px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border-style: none;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.bookATripNow:hover {
+    background-color:#c80000;
+}
+
+#ourShuttles {
+    display: flex;
+    padding: 40px;
+    margin: 0 5% 0 5%;
+}
+
+.shuttleText {
+    width: 400px;
+    align-self: center;
+    padding: 40px;
+}
+
+.shuttleText h1 {
+    font-size: 30px;
+}
+
+.shuttleText h5 {
+    color: lightblue;
+}
+
+.shuttleIMG {
+    margin-left: auto;
+}
+
+footer{
+    color:#828282
+}
+
+footer h5{
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.footerFlex{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 40px;
+}
+
+.footerLogo, .footerCompany, .footerLinks{
+    padding: 40px;
+    margin-right: 40px;
+}
+
+.belowhr {
+    display: flex;
+    padding: 40px;
+}
+
+.terms {
+    margin-left: auto;
+}
+
+.terms a{
+    padding-right: 20px;
+}
+
+.terms hr {
+    margin: 0 40px 0 40px;
+}
+
+
+.flightsHeader {
+    height: 300px;
+    background-image: url(../Assets/Images/headerbackBack.png);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: -5px;
+    overflow: none;
+    max-width: 100%;
+}
+
+.flightsHeader h1{
+    color: white;
+    font-family: 'Porter Sans Block';
+    font-size: 50px;
+    align-self: center;
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+.filterStrip {
+    background-color: #4D299A;
+    height: 100px;
+    max-width: 100%;
+    margin-top: 0;
+    color: #ffffff;
+    display: flex;
+    overflow: hidden;
+    padding: 0 60px 0 60px;
+}
+
+.filterStripLeft {
+        display: flex;
+        align-self: center;
+}
+
+.filterStripLeft h3, i{
+    padding-right: 20px;
+}
+
+
+.filterStripRight {
+    display: flex;
+    margin-left: auto;
+    align-self: center;
+}
+
+.filterStripRight h3{
+    padding-right: 20px;
+}
+
+.metaTags td{
+    padding-right: 50px;
+}
+
+.flightOne {
+    display: flex;
+    padding: 100px 10% 100px 10%;
+}
+
+.flightOne h2{
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.flightOne img{
+    width: 100%;
+}
+
+.innerFlightOneText {
+    display: flex;
+}
+
+.innerFlightOneText h3{
+    padding-right: 20px;
+}
+
+.flightOneText {
+    margin-left: 60px;
+}
+
+.flightOneText p {
+    width: 800px;
+    padding-top: 40px;
+}
+
+.flightOneText span{
+    text-decoration: line-through;
+    color: grey;
+    padding-left: 20px;
+}
+
+.flightOne hr{
+    margin: 40px 0 40px 0;
+
+}
+
+.flightOne h6{
+    color: grey;
+}
+
+.starsFlightOne {
+    margin-top: 20px;
+    display: flex;
+}
+
+.starsFlightOne h6{
+    margin-left: 20px;
+}
+
+.starsFlightOne i{
+    padding: 2px;
+}
+
+.reviewsFlightOne {
+    align-self: center;
+}
+
+.ticketNumber{
+    padding: 20px;
+    background-color: #4D299A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.ticketNumber span{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 20px 0 20px;
+}
+
+/*ROW TWO*/
+
+.flightTwo {
+    display: flex;
+    padding: 100px 10% 100px 10%;
+   background-color: #4D299A;
+   color: #ffffff;
+}
+
+.flightTwo h2{
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.flightTwo img{
+    width: 100%;
+}
+
+
+.flightTwoText {
+    margin-left: 60px;
+}
+
+.flightTwoText p {
+    width: 800px;
+    padding-top: 40px;
+}
+
+.flightTwoText span{
+    text-decoration: line-through;
+    color: grey;
+    padding-left: 20px;
+}
+
+.flightTwo hr{
+    margin: 40px 0 40px 0;
+
+}
+
+.flightTwo h6{
+    color: grey;
+}
+
+.starsFlightTwo {
+    margin-top: 20px;
+    display: flex;
+}
+
+.starsFlightTwo h6{
+    margin-left: 20px;
+}
+
+.starsFlightTwo i{
+    padding: 2px;
+}
+
+.reviewsFlightTwo {
+    align-self: center;
+}
+
+.flightTwo .ticketNumber{
+    padding: 20px;
+    background-color: #0eadd8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.ticketNumber span{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 20px 0 20px;
+}
+
+/*ROW THREE*/
+
+.flightThree {
+    display: flex;
+    padding: 100px 10% 100px 10%;
+}
+
+.flightThree h2{
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.flightThree img{
+    width: 100%;
+}
+
+
+.flightThreeText {
+    margin-left: 60px;
+}
+
+.flightThreeText p {
+    width: 800px;
+    padding-top: 40px;
+}
+
+.flightThreeText span{
+    text-decoration: line-through;
+    color: grey;
+    padding-left: 20px;
+}
+
+.flightThree hr{
+    margin: 40px 0 40px 0;
+
+}
+
+.flightThree h6{
+    color: grey;
+}
+
+.starsFlightThree {
+    margin-top: 20px;
+    display: flex;
+}
+
+.starsFlightThree h6{
+    margin-left: 20px;
+}
+
+.starsFlightThree i{
+    padding: 2px;
+}
+
+.reviewsFlightThree {
+    align-self: center;
+}
+
+.flightThree .ticketNumber{
+    padding: 20px;
+    background-color:#4D299A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.ticketNumber span{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 20px 0 20px;
+}
+
+/*ROW FOUR*/
+
+.flightFour {
+    display: flex;
+    padding: 100px 10% 100px 10%;
+   background-color: #4D299A;
+   color: #ffffff;
+}
+
+.flightFour h2{
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.flightFour img{
+    width: 100%;
+}
+
+
+.flightFourText {
+    margin-left: 60px;
+}
+
+.flightFourText p {
+    width: 800px;
+    padding-top: 40px;
+}
+
+.flightFourText span{
+    text-decoration: line-through;
+    color: grey;
+    padding-left: 20px;
+}
+
+.flightFour hr{
+    margin: 40px 0 40px 0;
+
+}
+
+.flightFour h6{
+    color: grey;
+}
+
+.starsFlightFour {
+    margin-top: 20px;
+    display: flex;
+}
+
+.starsFlightFour h6{
+    margin-left: 20px;
+}
+
+.starsFlightFour i{
+    padding: 2px;
+}
+
+.reviewsFlightFour {
+    align-self: center;
+}
+
+.flightFour .ticketNumber{
+    padding: 20px;
+    background-color:#0eadd8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.ticketNumber span{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 20px 0 20px;
+}
+
+/*ROW FIVE*/
+
+.flightFive {
+    display: flex;
+    padding: 100px 10% 100px 10%;
+}
+
+.flightFive h2{
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.flightFive img{
+    width: 100%;
+}
+
+
+.flightFiveText {
+    margin-left: 60px;
+}
+
+.flightFiveText p {
+    width: 800px;
+    padding-top: 40px;
+}
+
+.flightFiveText span{
+    text-decoration: line-through;
+    color: grey;
+    padding-left: 20px;
+}
+
+.flightFive hr{
+    margin: 40px 0 40px 0;
+
+}
+
+.flightFive h6{
+    color: grey;
+}
+
+.starsFlightFive {
+    margin-top: 20px;
+    display: flex;
+}
+
+.starsFlightFive h6{
+    margin-left: 20px;
+}
+
+.starsFlightFive i{
+    padding: 2px;
+}
+
+.reviewsFlightFive {
+    align-self: center;
+}
+
+.flightFive .ticketNumber{
+    padding: 20px;
+    background-color:#4D299A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.ticketNumber span{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 20px 0 20px;
+}
+
+
+
+/*ROW SIX*/
+
+.flightSix {
+    display: flex;
+    padding: 100px 10% 100px 10%;
+   background-color: #4D299A;
+    color: #ffffff;
+}
+
+.flightSix h2{
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.flightSix img{
+    width: 100%;
+}
+
+
+.flightSixText {
+    margin-left: 60px;
+}
+
+.flightSixText p {
+    width: 800px;
+    padding-top: 40px;
+}
+
+.flightSixText span{
+    text-decoration: line-through;
+    color: grey;
+    padding-left: 20px;
+}
+
+.flightSix hr{
+    margin: 40px 0 40px 0;
+
+}
+
+.flightSix h6{
+    color: grey;
+}
+
+.starsFlightSix {
+    margin-top: 20px;
+    display: flex;
+}
+
+.starsFlightSix h6{
+    margin-left: 20px;
+}
+
+.starsFlightSix i{
+    padding: 2px;
+}
+
+.reviewsFlightSix {
+    align-self: center;
+}
+
+.flightSix .ticketNumber{
+    padding: 20px;
+    background-color:#0eadd8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.ticketNumber span{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 20px 0 20px;
+
+}
+
+#cAboutUs {
+    display: flex;
+    margin: 5% 5% 5% 5%;
+}
+
+
+.cAboutText {
+    width: 600px;
+    align-self: center;
+}
+
+.cAboutText h5 {
+    color: lightblue;
+}
+
+.cAboutText h1{
+    font-size: 30px;
+}
+
+
+.cAboutIMG {
+    margin-left: auto;
+}
+
+
+#contactInfo {
+    display: flex;
+    padding: 100px;
+}
+
+.cInfoLeft h5{
+    color:lightblue;
+    margin-top: 20px;
+    
+}
+
+.cInfoLeft h1{
+    font-size: 30px;
+}
+
+.contactInfo h1{
+    color:#4D299A;
+}
+
+.cInfoRight{
+    margin-left: auto;
+    width: 40%;
+}
+
+#contact {
+    background-image: url(../Assets/Images/formBack.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 20px;
+    min-width: 600px;
+}
+
+.formContainer h4{
+    margin-left: 20px;
+}
+
+.formContainer h3{
+    margin-left: 33px;
+    font-size: 30px;
+}
+
+.formContainer {
+   border-width: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 20px;
+}
+
+input, textarea{
+    border: none;
+    padding: 10px;
+    width: 90%;
+    border-radius: 7px;
+    margin: 5px auto 5px auto;
+    display: flex;
+    font-family: "Poppins", sans-serif;
+}
+
+textarea {
+    height: 200px;
+}
+
+#submitContactForm {
+    padding: 20px;
+    background-color: #e91818;
+    color: white;
+    border: none;
+    width: 200px;
+    border-radius: 12px;
+    margin-left: 15px;
+}
+
+form {
+    height: 700px;
+}
+
+
+
+
+
