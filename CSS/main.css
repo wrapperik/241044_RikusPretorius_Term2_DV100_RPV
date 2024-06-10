@@ -549,8 +549,9 @@ footer h5{
 .ticketNumber span{
     text-decoration: none;
     color: #ffffff;
-    padding: 0 20px 0 20px;
+    padding: 0 0px 0 0px;
 }
+
 
 /*ROW FOUR*/
 
@@ -881,8 +882,3 @@ textarea {
 form {
     height: 700px;
 }
-
-
-
-
-
