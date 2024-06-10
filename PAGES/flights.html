@@ -28,14 +28,27 @@
         <nav>
             <div class="logo"></div>
             <div class="centerMenu">
-            <a href="../index.html">Home</a>
-            <a href="../PAGES/flights.html">Flights</a>
-            <a href="../PAGES/about.html">About</a>
-            <a href="../PAGES/contact.html">Contact</a></div>
-            <div class="searchBar"> <i class="fa-solid fa-magnifying-glass"></i> <p>Search</p> <i class="fa-solid fa-cart-shopping"></i> </div>
+                <a href="../index.html">Home</a>
+                <a href="../PAGES/flights.html">Flights</a>
+                <a href="../PAGES/about.html">About</a>
+                <a href="../PAGES/contact.html">Contact</a>
+            </div>
+            <input type="text" class="form-control mt-3 mx-auto" id="myInput" placeholder="Search Flights..." style="width: 30%;">
+    
+            <div class="dropdown-container" id="dropdownContainer"></div>
+            <section class="searchSpace">
+                <div class="searchContainer">
+                    <h3 class="text-danger mt-5 text-center" id="para" style="display: none;">Ahh! This flight does not exist.</h3>
+                </div>
+            
+                <div class="row mt-3" id="card">
+            
+                </div>
+            
+                </section>
         </nav>
     </div>
-
+    </div>
     <header class="flightsHeader">
         <h1>Book a flight</h1>
     </header>

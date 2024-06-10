@@ -34,6 +34,7 @@ nav {
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
+    margin: auto 0 auto 0;
 }
 
 .centerMenu {
@@ -50,13 +51,44 @@ nav {
     color: #000000;
 }
 
-.searchBar{
-    display: flex;
-    margin-left: auto;
+.btn-primary {
+    background-color: #4D299A;
+}
+
+.btn-primary:hover {
+    background-color: #422289;
+}
+
+#myInput {
+    margin-top: 0 !important;
+  }
+  
+
+            
+.dropdown-container {
+    position: absolute;
+    top: calc(100% - 20px);
+    left: 0;
+    z-index: 1000;
+    width: 20%;
+    margin-left: 78.8%;
     background-color: #ffffff;
-    width: 200px;
+    backdrop-filter: blur(5px);
+    border: 1px solid #ced4da;
     border-radius: 5px;
-    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-dropdown {
+    padding: 10px;
+    border-bottom: 1px solid #ced4da;
+
+}
+
+.card-dropdown:hover {
+    background-color: #f8f9fa;
+    backdrop-filter: blur(5px);
 }
 
 .fa-solid {

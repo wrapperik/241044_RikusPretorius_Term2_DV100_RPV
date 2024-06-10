@@ -48,40 +48,42 @@ let gallaryarray = [
 showgallery(gallaryarray);
 document.getElementById("card").innerText = "";
 
-function showgallery(currarray){
-  document.getElementById("card").innerHTML = "";
-    for(var i=0;i<currarray.length;i++){
-      document.getElementById("card").innerHTML += `
-      <div class="col-md-4 mt-3">
-        <div class="card p-3 ps-5 pe-5">
-          <h4 class="text-capitalize text-center">${currarray[i].name}</h4>
-          <p class="mt-2">${currarray[i].desc}</p>
+// Update the showgallery function to render cards in dropdown-like format
+function showgallery(currarray) {
+  const dropdownContainer = document.getElementById("dropdownContainer");
+  dropdownContainer.innerHTML = "";
+
+  for (let i = 0; i < currarray.length; i++) {
+      const card = document.createElement("div");
+      card.classList.add("card-dropdown");
+      card.innerHTML = `
+          <h4 class="text-capitalize">${currarray[i].name}</h4>
+          <p>${currarray[i].desc}</p>
           <button class="btn btn-primary w-100 mx-auto">Go</button>
-        </div>
-      </div>
-      `
-    }
+      `;
+      dropdownContainer.appendChild(card);
+  }
 };
+
+document.getElementById("dropdownContainer").innerHTML = "";
+
+
 //<img src="${currarray[i].src}" width="100%" height="320px" />
 
-document.getElementById("myInput").addEventListener("keyup", function(){
+document.getElementById("myInput").addEventListener("keyup", function() {
   let text = document.getElementById("myInput").value.toLowerCase();
 
-  filterarray = gallaryarray.filter(function (item) {
-    return item.name.toLowerCase().includes(text);
-  });
+  if (text === "") {
+    document.getElementById("dropdownContainer").innerHTML = ""; 
+  } else {
+    filterarray = gallaryarray.filter(function(item) {
+      return item.name.toLowerCase().includes(text);
+    });
 
-  if(text ===""){
-    showgallery(gallaryarray);
-  }
-  else{
-    if(filterarray.lenght === 0){
-      document.getElementById("para").style.display = 'block';
-      document.getElementById("card").innerHTML = "";
-    }
-    else{
+    if (filterarray.length === 0) {
+      document.getElementById("dropdownContainer").innerHTML = "";
+    } else {
       showgallery(filterarray);
-      document.getElementById("para").style.display = 'none';
     }
   }
 });
