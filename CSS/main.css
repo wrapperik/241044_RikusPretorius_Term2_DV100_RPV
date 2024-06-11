@@ -26,6 +26,27 @@ nav {
     backdrop-filter: blur(5px);
 }
 
+nav .btn:hover{
+    border: none;
+    box-shadow: none;
+}
+
+nav .btn{
+    border: none;
+    box-shadow: none;
+}
+
+nav .btn:active{
+    border: none;
+    box-shadow: none;
+}
+
+nav .btn:focus {
+    border: none;
+    box-shadow: none;
+    outline: none; 
+}
+
 
 .logo {
     width: 300px;

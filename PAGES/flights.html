@@ -16,7 +16,7 @@
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
          <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="../CSS/main.css">
         
 
@@ -33,8 +33,13 @@
                 <a href="../PAGES/about.html">About</a>
                 <a href="../PAGES/contact.html">Contact</a>
             </div>
-            <input type="text" class="form-control mt-3 mx-auto" id="myInput" placeholder="Search Flights..." style="width: 30%;">
+           
+            <input type="text" class="form-control mt-3 mx-auto" id="myInput" placeholder="Search Flights..." style="width: 20%;" autocomplete="off">
     
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i>
+            </button>
+
             <div class="dropdown-container" id="dropdownContainer"></div>
             <section class="searchSpace">
                 <div class="searchContainer">
@@ -52,7 +57,27 @@
     <header class="flightsHeader">
         <h1>Book a flight</h1>
     </header>
-    
+
+    <!--My modal code here-->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus omnis quod culpa eius tempore minus laborum et quasi corporis numquam, adipisci accusamus, soluta voluptatibus. Aliquid accusamus labore numquam voluptatum earum?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus omnis quod culpa eius tempore minus laborum et quasi corporis numquam, adipisci accusamus, soluta voluptatibus. Aliquid accusamus labore numquam voluptatum earum?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus omnis quod culpa eius tempore minus laborum et quasi corporis numquam, adipisci accusamus, soluta voluptatibus. Aliquid accusamus labore numquam voluptatum earum?</p>
+                   </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light">Back to shopping</button>
+                    <button class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="filterStrip">
         <div class="filterStripLeft">
@@ -174,6 +199,7 @@
         </div>
     </section>
 
+    <div id="mySearchAnchorThree">
     <section class="flightThree">
         <div class="flightThreeIMG">
             <img src="../Assets/Images/flightJupiter.png">
@@ -222,6 +248,7 @@
         </div>
         </div>
     </section>
+</div>
 
     <section class="flightFour">
         <div class="flightFourIMG">
@@ -403,7 +430,7 @@
         </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="../JS/scripts.js"></script>
 </body>
 </html>

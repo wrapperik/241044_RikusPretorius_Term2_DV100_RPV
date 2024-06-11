@@ -5,7 +5,7 @@ let gallaryarray = [
     id: 1,
     name: "The Classic Mars Experience",
     src: "../Assets/Images/flighhtMars.png",
-    desc: "Embark on a Mars vacation: red deserts, ancient relics, and towering canyons await. Enjoy low-gravity hiking, rover trips to Olympus Mons, and stargazing under Phobos and Deimos. Unforgettable adventures beckon on the rust-colored landscapes of the Red Planet."
+    desc: "Embark on a Mars vacation: red deserts, ancient relics, and towering canyons await. Enjoy low-gravity hiking, rover trips to Olympus Mons, and stargazing under Phobos and Deimos. Unforgettable adventures beckon on the rust-colored landscapes of the Red Planet.",
   },
 
   {
@@ -48,7 +48,7 @@ let gallaryarray = [
 showgallery(gallaryarray);
 document.getElementById("card").innerText = "";
 
-// Update the showgallery function to render cards in dropdown-like format
+
 function showgallery(currarray) {
   const dropdownContainer = document.getElementById("dropdownContainer");
   dropdownContainer.innerHTML = "";
@@ -59,6 +59,7 @@ function showgallery(currarray) {
       card.innerHTML = `
           <h4 class="text-capitalize">${currarray[i].name}</h4>
           <p>${currarray[i].desc}</p>
+          
           <button class="btn btn-primary w-100 mx-auto">Go</button>
       `;
       dropdownContainer.appendChild(card);
@@ -66,9 +67,6 @@ function showgallery(currarray) {
 };
 
 document.getElementById("dropdownContainer").innerHTML = "";
-
-
-//<img src="${currarray[i].src}" width="100%" height="320px" />
 
 document.getElementById("myInput").addEventListener("keyup", function() {
   let text = document.getElementById("myInput").value.toLowerCase();
@@ -87,3 +85,11 @@ document.getElementById("myInput").addEventListener("keyup", function() {
     }
   }
 });
+
+//THE TOOLTIP ANNOYED ME SO I REMOVED IT
+
+document.getElementById('myInput').removeAttribute('title');
+
+//Followed a youtube tutorial for the above code: (https://youtu.be/gBluXDKo6d4?si=OEjgQH5cn4CDBS1H)
+//Followed a series of youtube tutorials for the code below: (https://youtube.com/playlist?list=PLD9SRxG6ST3HignjcXUX6w8RcT0_b5ihV&si=uuAcjMwVyl9Yo_1c)
+
