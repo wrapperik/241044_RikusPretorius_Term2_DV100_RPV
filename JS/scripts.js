@@ -60,8 +60,14 @@ function showgallery(currarray) {
 
 function navigateToSection(id) {
   const sectionId = `linkTo${gallaryarray[id - 1].name.replace(/ /g, '')}`;
-  window.location.href = `../PAGES/flights.html#${sectionId}`;
+  
+  if (window.location.pathname.endsWith("index.html")) {
+    window.location.href = `./PAGES/flights.html#${sectionId}`;
+  } else {
+    window.location.href = `../PAGES/flights.html#${sectionId}`;
+  }
 }
+
 
 document.getElementById("myInput").addEventListener("keyup", function() {
   let text = document.getElementById("myInput").value.toLowerCase();
