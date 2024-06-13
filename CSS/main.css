@@ -47,6 +47,28 @@ nav .btn:focus {
     outline: none; 
 }
 
+nav .cart span{
+    padding: 5px;
+    background-color: #e91818;
+    color: #ffffff;
+    z-index: 999;
+    position: absolute;
+    top: 7px;
+
+    right: 25px;
+    width: 25px; 
+    height: 25px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%;
+    
+}
+
+#dropdownContainer {
+    display: none; 
+  }
+
 
 .logo {
     width: 300px;
@@ -155,41 +177,56 @@ header {
 
 #featured {
     display: flex;
-    background-color: #4D299A;
-    padding: 60px 60px 60px 40px;
     align-items: center;
     justify-content: center;
+    background-color: #4D299A;
+    padding: 60px 40px;
+    position: relative;
+}
 
+.marsImageSlider {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .marsImage {
     width: 600px;
     height: 600px;
-    background-image: url(../Assets/Images/marsSliderClipped1.png);
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
-    padding: 10px;
-    position: relative;
+    background-position: center;
+    position: absolute;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.marsImage.active {
+    opacity: 1;
 }
 
 .featuredText {
     width: 50%;
+    color: white;
 }
 
-.featuredText h1{
-    color: white;
+.featuredText h1 {
     font-size: 30px;
 }
 
-.featuredText h5{
+.featuredText h5 {
     color: lightblue;
 }
 
-.featuredText p{
+.featuredText p {
     color: lightblue;
 }
 
-.featuredText button{
+.featuredText button {
     padding: 15px;
     background-color: #ff0000;
     color: white;
@@ -199,33 +236,48 @@ header {
     border-radius: 12px;
 }
 
-.rightArrow{
+.slider-controls {
     position: absolute;
-    right: 0;
     top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     transform: translateY(-50%);
-    margin-right: 20px;
-    padding: 10px;
-
+    pointer-events: none; 
 }
 
-.leftArrow{
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-right: 20px;
-    padding: 10px;
+.prev, .next {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    pointer-events: all; 
+    font-size: 40px;
+}
+
+
+
+.upcomingTrips {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    padding: 20px;
+    justify-content: center; 
+}
+
+.planetMars, .planetJupiter, .planetNeptune, .planetSaturn {
+    flex: 0 0 calc(25% - 20px); 
+    padding: 0 10px; 
+    box-sizing: border-box; 
 }
 
 .trips {
     text-align: center;
     background-color: #4D299A;
-    padding: 20px;
     color: #ffffff;
     padding: 40px;
-    justify-items: center;
-    align-self: center;
 }
 
 .trips h1 {
@@ -233,20 +285,26 @@ header {
     font-size: 40px;
 }
 
-.trips h5{
+.trips h5 {
     color: lightblue;
 }
 
-.upcomingTrips{
-    display: flex;
-    padding: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.goToFlights{
+    color: #ffffff;
+    background-color:#ff0000;
+    padding: 20px 70px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border-style: none;
+    margin-top: 40px;
+    margin-left: 20px;
 }
 
-.planetMars, .planetJupiter, .planetNeptune, .planetSaturn {
-    padding-left: 20px;
+.goToFlights:hover{
+    background-color:#c80000;
 }
+
 
 .bookATripNow {
     color: #ffffff;
@@ -929,9 +987,104 @@ textarea {
     border: none;
     width: 200px;
     border-radius: 12px;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
 form {
-    height: 700px;
+    min-height: fit-content;
 }
+
+/*-------------------My Cart Modal Code--------------------*/
+
+.products-container {
+    margin-top: 20px;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.product-header h5 {
+    flex: 1;
+    text-align: center;
+}
+
+.products {
+    width: 100%;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.product > div, .product > span {
+    flex: 1;
+    text-align: center;
+}
+
+.price, .quantity, .total {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotalTitle {
+    width: 20%;
+    text-align: right;
+}
+
+.basketTotal {
+    width: 20%;
+    text-align: right;
+}
+
+
+.products-container .fa-solid {
+    font-size: 16px;
+    color: #422289;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+.product .fa-circle-xmark {
+    color: #7000a3;
+    font-size: 20px;
+}
+
+
+.quantity .fa-circle-chevron-left, 
+.quantity .fa-circle-chevron-right {
+    color: #7000a3;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+
+.products-container .fa-solid:hover {
+    color: #5a37b5;
+}
+
+.myImageBankIMG {
+    padding: 5px;
+    border-radius: 5px;
+    width: 90%;
+    justify-self: center;
+}
+

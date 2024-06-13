@@ -35,9 +35,10 @@
             </div>
            
             <input type="text" class="form-control mt-3 mx-auto" id="myInput" placeholder="Search Flights..." style="width: 20%;" autocomplete="off">
+
     
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#cartModal">
-                <i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i>
+            <button class="btn cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <span>0</span><i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i>
             </button>
 
             <div class="dropdown-container" id="dropdownContainer"></div>
@@ -53,31 +54,39 @@
                 </section>
         </nav>
     </div>
-    </div>
+
     <header class="flightsHeader">
         <h1>Book a flight</h1>
     </header>
 
-    <!--My modal code here-->
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title">Your Cart</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- My Modal Code Here -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Your Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="products-container">
+                    <div class="product-header">
+                        <h5 class="product-title">Product</h5>
+                        <h5 class="price">Price</h5>
+                        <h5 class="quantity">Quantity</h5>
+                        <h5 class="total">Total</h5>
+                    </div>
+                    <div class="products">
+                        
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus omnis quod culpa eius tempore minus laborum et quasi corporis numquam, adipisci accusamus, soluta voluptatibus. Aliquid accusamus labore numquam voluptatum earum?</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus omnis quod culpa eius tempore minus laborum et quasi corporis numquam, adipisci accusamus, soluta voluptatibus. Aliquid accusamus labore numquam voluptatum earum?</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus omnis quod culpa eius tempore minus laborum et quasi corporis numquam, adipisci accusamus, soluta voluptatibus. Aliquid accusamus labore numquam voluptatum earum?</p>
-                   </div>
-                <div class="modal-footer">
-                    <button class="btn btn-light">Back to shopping</button>
-                    <button class="btn btn-primary">Checkout</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-light" data-bs-dismiss="modal">Back to shopping</button>
+                <a href="../index.html"><button class="btn btn-primary">Checkout</button></a>
             </div>
         </div>
     </div>
+</div>
 
     <div class="filterStrip">
         <div class="filterStripLeft">
@@ -96,6 +105,7 @@
     </div>
     </div>
 
+    <div id="linkToMars">
     <section class="flightOne">
         <div class="flightOneIMG">
             <img src="../Assets/Images/flighhtMars.png">
@@ -117,111 +127,7 @@
             </div>
             <p>Embark on a Mars vacation: red deserts, ancient relics, and towering canyons await. Enjoy low-gravity hiking, rover trips to Olympus Mons, and stargazing under Phobos and Deimos. Unforgettable adventures beckon on the rust-colored landscapes of the Red Planet.</p>
 
-            <!--Im working on functionality first, then i'll add the design back-->
-            <div>
-                <button><h3 class="minus"> - </h3></button>
-                <button><h3 class="number"> 0 </h3></button>
-                <button><h3 class="plus"> + </h3></button>
-            </div>
-            <button class="bookATripNow">Book Now</button>
-            <hr>
-            <div >
-                <table class="metaTags">
-                    <tr>
-                        <td>SKU:</td>
-                        <td>SS01</td>
-                    </tr>
-
-                    <tr>
-                        <td>Shuttle:</td>
-                        <td>The Opulance</td>
-                    </tr>
-
-                    <tr>
-                        <td>Tags:</td>
-                        <td>Mars, Luxury, Sale</td>
-                    </tr>
-
-                    <tr>
-                        <td>Date:</td>
-                        <td>16 June - 19 July</td>
-                    </tr>
-        </table>
-        </div>
-        </div>
-    </section>
-
-    <section class="flightTwo">
-        <div class="flightOneIMG">
-            <img src="../Assets/Images/flightNeptune.png">
-        </div>
-        <div class="flightTwoText">
-            <h2>Neptune’s Cosmic Dive</h2>
-            <h4>R45 000</h4>
-            <div class="innerFlightTwoText">
-            <div class="starsFlightTwo">
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <div class="reviewsFlightTwo">
-                <h6>36 Reviews</h6>
-                </div>
-            </div>
-            </div>
-            <p>Embark on a voyage to Neptune aboard the "Neptune Voyager." Witness surreal vistas of swirling clouds and rings. Experience weightlessness and explore frigid oceans. Engage in thrilling spacewalks, observe celestial phenomena, and savor gourmet space cuisine. An unforgettable adventure awaits, blending luxury with cosmic exploration.</p>
-            <button class="ticketNumber"><h3>-<span>1</span>+</h3></button>
-            <button class="bookATripNow">Book Now</button>
-            <hr>
-            <div >
-                <table class="metaTags">
-                    <tr>
-                        <td>SKU:</td>
-                        <td>SS01</td>
-                    </tr>
-
-                    <tr>
-                        <td>Shuttle:</td>
-                        <td>The Opulance</td>
-                    </tr>
-
-                    <tr>
-                        <td>Tags:</td>
-                        <td>Mars, Luxury, Sale</td>
-                    </tr>
-
-                    <tr>
-                        <td>Date:</td>
-                        <td>16 June - 19 July</td>
-                    </tr>
-        </table>
-        </div>
-        </div>
-    </section>
-
-    <div id="mySearchAnchorThree">
-    <section class="flightThree">
-        <div class="flightThreeIMG">
-            <img src="../Assets/Images/flightJupiter.png">
-        </div>
-        <div class="flightThreeText">
-            <h2>The Giant’s Journey</h2>
-            <h4>R65 000</h4>
-            <div class="innerFlightThreeText">
-            <div class="starsFlightThree">
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
-                <div class="reviewsFlightThree">
-                <h6>48 Reviews</h6>
-                </div>
-            </div>
-            </div>
-            <p>Embark on a Jupiter voyage aboard the "Jupiter Odyssey." Witness its majestic storms and swirling atmosphere. Dive into metallic hydrogen oceans. Explore its moons, each a world unto itself. Engage in gravity surfing, comet chasing, and space excursions. Experience cosmic wonder in luxury, blending exploration with adventure.</p>
-            <button class="ticketNumber"><h3>-<span>1</span>+</h3></button>
-            <button class="bookATripNow">Book Now</button>
+            <button class="bookATripNow cart1">Add to cart</button>
             <hr>
             <div >
                 <table class="metaTags">
@@ -250,28 +156,28 @@
     </section>
 </div>
 
-    <section class="flightFour">
-        <div class="flightFourIMG">
-            <img src="../Assets/Images/flightSaturn.png">
+
+<div id="linkToNeptune">
+    <section class="flightTwo">
+        <div class="flightOneIMG">
+            <img src="../Assets/Images/flightNeptune.png">
         </div>
-        <div class="flightFourText">
-            <h2>Ring Around a Saturn</h2>
-            <h4>R40 000</h4>
-            <div class="innerFlightFourText">
-            <div class="starsFlightFour">
+        <div class="flightTwoText">
+            <h2>Neptune’s Cosmic Dive</h2>
+            <h4>R45 000</h4>
+            <div class="innerFlightTwoText">
+            <div class="starsFlightTwo">
                 <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                 <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                 <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                 <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
-                <div class="reviewsFlightFour">
-                <h6>16 Reviews</h6>
+                <div class="reviewsFlightTwo">
+                <h6>36 Reviews</h6>
                 </div>
             </div>
             </div>
-            <p>Embark on a thrilling voyage to Saturn aboard the "Saturn Explorer." Marvel at its iconic rings and turbulent storms. Explore its diverse moons, from icy Enceladus to mysterious Titan, with activities including rover expeditions and cave exploration. Experience the wonders of the cosmos amidst luxurious accommodations, where the thrill of discovery intertwines seamlessly with the excitement of adventure.</p>
-            <button class="ticketNumber"><h3>-<span>1</span>+</h3></button>
-            <button class="bookATripNow">Book Now</button>
+            <p>Embark on a voyage to Neptune aboard the "Neptune Voyager." Witness surreal vistas of swirling clouds and rings. Experience weightlessness and explore frigid oceans. Engage in thrilling spacewalks, observe celestial phenomena, and savor gourmet space cuisine. An unforgettable adventure awaits, blending luxury with cosmic exploration.</p>
+            <button class="bookATripNow cart2">Add to cart</button>
             <hr>
             <div >
                 <table class="metaTags">
@@ -298,7 +204,110 @@
         </div>
         </div>
     </section>
+</div>
 
+
+    <div id="linkToJupiter">
+    <section class="flightThree">
+        <div class="flightThreeIMG">
+            <img src="../Assets/Images/flightJupiter.png">
+        </div>
+        <div class="flightThreeText">
+            <h2>The Giant’s Journey</h2>
+            <h4>R65 000</h4>
+            <div class="innerFlightThreeText">
+            <div class="starsFlightThree">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <div class="reviewsFlightThree">
+                <h6>48 Reviews</h6>
+                </div>
+            </div>
+            </div>
+            <p>Embark on a Jupiter voyage aboard the "Jupiter Odyssey." Witness its majestic storms and swirling atmosphere. Dive into metallic hydrogen oceans. Explore its moons, each a world unto itself. Engage in gravity surfing, comet chasing, and space excursions. Experience cosmic wonder in luxury, blending exploration with adventure.</p>
+            <button class="bookATripNow cart3">Add to cart</button>
+            <hr>
+            <div >
+                <table class="metaTags">
+                    <tr>
+                        <td>SKU:</td>
+                        <td>SS01</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shuttle:</td>
+                        <td>The Opulance</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tags:</td>
+                        <td>Mars, Luxury, Sale</td>
+                    </tr>
+
+                    <tr>
+                        <td>Date:</td>
+                        <td>16 June - 19 July</td>
+                    </tr>
+        </table>
+        </div>
+        </div>
+    </section>
+</div>
+
+<div id="linkToSaturn">
+    <section class="flightFour">
+        <div class="flightFourIMG">
+            <img src="../Assets/Images/flightSaturn.png">
+        </div>
+        <div class="flightFourText">
+            <h2>Ring Around a Saturn</h2>
+            <h4>R40 000</h4>
+            <div class="innerFlightFourText">
+            <div class="starsFlightFour">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <div class="reviewsFlightFour">
+                <h6>16 Reviews</h6>
+                </div>
+            </div>
+            </div>
+            <p>Embark on a thrilling voyage to Saturn aboard the "Saturn Explorer." Marvel at its iconic rings and turbulent storms. Explore its diverse moons, from icy Enceladus to mysterious Titan, with activities including rover expeditions and cave exploration. Experience the wonders of the cosmos amidst luxurious accommodations, where the thrill of discovery intertwines seamlessly with the excitement of adventure.</p>
+            <button class="bookATripNow cart4">Add to cart</button>
+            <hr>
+            <div >
+                <table class="metaTags">
+                    <tr>
+                        <td>SKU:</td>
+                        <td>SS01</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shuttle:</td>
+                        <td>The Opulance</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tags:</td>
+                        <td>Mars, Luxury, Sale</td>
+                    </tr>
+
+                    <tr>
+                        <td>Date:</td>
+                        <td>16 June - 19 July</td>
+                    </tr>
+        </table>
+        </div>
+        </div>
+    </section>
+</div>
+
+<div id="linkToUranus"> 
     <section class="flightFive">
         <div class="flightFiveIMG">
             <img src="../Assets/Images/flightUranus.png">
@@ -320,8 +329,7 @@
             </div>
             <p>Embark on a cosmic adventure to Uranus with our "Uranus Unveiled" tour. Explore its icy atmosphere and captivating moons. Experience thrilling zero-gravity excursions, witness mesmerizing auroras, and immerse yourself in celestial photography workshops. With luxury accommodations and expert guides, discover the wonders of Uranus in a journey of a
                 lifetime.</p>
-            <button class="ticketNumber"><h3>-<span>1</span>+</h3></button>
-            <button class="bookATripNow">Book Now</button>
+            <button class="bookATripNow cart5">Add to cart</button>
             <hr>
             <div >
                 <table class="metaTags">
@@ -348,7 +356,9 @@
         </div>
         </div>
     </section>
+</div>
 
+<div id="linkToMoon">
     <section class="flightSix">
         <div class="flightSixIMG">
             <img src="../Assets/Images/flightMoon.png">
@@ -368,8 +378,7 @@
             </div>
             </div>
             <p>Experience the ultimate lunar getaway with our "Moonlight Meander" package. Depart Earth's atmosphere aboard the "Celestial Cruiser" for a short but unforgettable journey to the Moon. Enjoy lunar walks, breathtaking views of Earthrise, and stargazing under the moon's serene glow. Immerse yourself in luxury accommodations amidst the tranquility of space.</p>
-            <button class="ticketNumber"><h3>-<span>1</span>+</h3></button>
-            <button class="bookATripNow">Book Now</button>
+            <button class="bookATripNow cart6">Add to cart</button>
             <hr>
             <div >
                 <table class="metaTags">
@@ -397,6 +406,25 @@
         </div>
     </section>
 
+</div>
+
+    <div class="container mt-4 d-flex justify-content-center">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <a href="#linkToMars"><img src="/Assets/Images/flighhtMars.png" class="myImageBankIMG" alt="Image 1"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+               <a href="#linkToUranus"> <img src="/Assets/Images/flightUranus.png" class="myImageBankIMG" alt="Image 2"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+               <a href="#linkToMoon"><img src="/Assets/Images/flightMoon.png" class="myImageBankIMG" alt="Image 3"></a> 
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+               <a href="#linkToNeptune">  <img src="/Assets/Images/flightNeptune.png" class="myImageBankIMG" alt="Image 3"></a>
+            </div>
+        </div>
+    </div>
+
 
     <footer>
         <div class="footerFlex">
@@ -408,7 +436,8 @@
             <h5>Company</h5>
             <a href="../index.html">Home</a><br>
             <a href="../PAGES/flights.html">Flights</a><br>
-            <a href="../PAGES/contact.html">Contact Us</a>
+            <a href="../PAGES/about.html">About</a><br>
+            <a href="../PAGES/contact.html">Contact</a>
         </div>
         <div class="footerLinks">
             <h5>Social Media Links</h5>
